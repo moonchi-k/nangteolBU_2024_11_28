@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Cafe24Moyamoya-Regular-v1.0";
+  src: url("./fonts/Cafe24Moyamoya-Regular-v1.0.otf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeoDunggeunmoPro-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
