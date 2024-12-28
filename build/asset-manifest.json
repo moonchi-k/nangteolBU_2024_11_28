@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/nangteolBU_2024_11_28/static/css/main.518ecdb1.css",
+    "main.js": "/nangteolBU_2024_11_28/static/js/main.73ba30b1.js",
+    "static/media/bgImg.png": "/nangteolBU_2024_11_28/static/media/bgImg.d3df0ccbedeb749da98b.png",
+    "static/media/Main.png": "/nangteolBU_2024_11_28/static/media/Main.153a7d0ff83988fdb5e7.png",
+    "static/media/Cafe24Moyamoya-Regular-v1.0.otf": "/nangteolBU_2024_11_28/static/media/Cafe24Moyamoya-Regular-v1.0.0f1fdc3575fd1474fdfc.otf",
+    "static/media/success.png": "/nangteolBU_2024_11_28/static/media/success.c897df2b3b8eefd782cd.png",
+    "static/media/베이컨.png": "/nangteolBU_2024_11_28/static/media/베이컨.5397c80cddaba5a2f7aa.png",
+    "static/media/LdImg.png": "/nangteolBU_2024_11_28/static/media/LdImg.0cc4faa27da7a74ac2bc.png",
+    "index.html": "/nangteolBU_2024_11_28/index.html",
+    "main.518ecdb1.css.map": "/nangteolBU_2024_11_28/static/css/main.518ecdb1.css.map",
+    "main.73ba30b1.js.map": "/nangteolBU_2024_11_28/static/js/main.73ba30b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.518ecdb1.css",
+    "static/js/main.73ba30b1.js"
+  ]
+}

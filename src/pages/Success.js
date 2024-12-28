@@ -4,7 +4,7 @@ import LdImg from "../components/LdImg.png";
 import "./Success.css";
 import { useEffect, useState } from "react";
 import complete from "../components/success.png";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Success = () => {
   const [showCompleted, setShowCompleted] = useState(false);
   const navigate = useNavigate();
@@ -14,6 +14,7 @@ const Success = () => {
     savedIndex || 0
   );
 
+  console.log(currentQuestionIndex);
   // 5초 뒤에 상태를 변경하여 화면을 새로 렌더링
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -129,7 +130,7 @@ const Success = () => {
               fontSize={"30px"}
               fontWeight={"500"}
             >
-              다 찾았다!
+              요리중
               <Box
                 marginTop={"20px"}
                 display={"flex"}

@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Bacon from "../components/베이컨.png";
 import Cheese from "../components/치즈.png";
 import { Box } from "@chakra-ui/react";
+import Ingre from "../components/ingre.png";
 import BgImg from "../components/bgImg.png";
 import { useEffect, useState } from "react";
 
@@ -23,6 +24,10 @@ const Alert = () => {
       case "402호로 간다. (베이컨이 있음)":
         return `${Bacon}`;
 
+      case "다른 냉장고를 더 찾아본다.":
+        console.log("dd");
+        return `${Ingre}`;
+
       default:
         return `${Cheese}`;
     }
@@ -33,7 +38,6 @@ const Alert = () => {
       setShowCompleted(true); // 5초 후에 완료 화면으로 전환
     }, 4000);
 
-    // 컴포넌트가 unmount 될 때 타이머를 정리
     return () => clearTimeout(timer);
   }, []);
 
@@ -44,7 +48,6 @@ const Alert = () => {
       });
     }, 3000);
 
-    // 컴포넌트가 언마운트될 때 타이머를 정리
     return () => clearTimeout(timer);
   }, [navigate]);
 

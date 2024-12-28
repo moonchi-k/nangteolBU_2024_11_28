@@ -1,4 +1,4 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import MainImg from "../components/Main.png";
 import { Link } from "react-router-dom";
 
@@ -26,7 +26,5 @@ const Main = () => {
     </>
   );
 };
-{
-}
 
 export default Main;

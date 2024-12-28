@@ -62,7 +62,7 @@ const Failure = () => {
   };
   return (
     <>
-      {!showCompleted ? (
+      {showCompleted ? (
         <Box
           maxW={"450px"}
           // p={"20px"}
@@ -104,7 +104,7 @@ const Failure = () => {
               </Box>
             </Box>
           </Box>
-          <Link to={"/"}>
+          <Link to={"/options"}>
             <Box w={"100%"} as="h4" fontSize={"20px"} marginTop={"15px"}>
               다시하기
             </Box>

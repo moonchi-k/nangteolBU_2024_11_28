@@ -1,24 +1,13 @@
 import { Box } from "@chakra-ui/react";
 import BgImg from "../components/bgImg.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { Typed } from "react-typed";
 
 const Desc = () => {
   const navigate = useNavigate();
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/options");
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [navigate]);
 
   const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const typedRef = useRef(null);
   const typedRefSecond = useRef(null);
@@ -41,7 +30,6 @@ const Desc = () => {
   }, []);
 
   useEffect(() => {
-    // 두 번째 Typed 컴포넌트 초기화
     if (showSecondTyped && typedRefSecond.current) {
       new Typed(typedRefSecond.current, {
         strings: [
@@ -49,7 +37,7 @@ const Desc = () => {
         ],
         typeSpeed: 50,
         loop: false,
-        showCursor: false, // 커서 숨기기
+        showCursor: false,
         onComplete: () => {
           setTimeout(() => {
             navigate("/options");
@@ -57,7 +45,7 @@ const Desc = () => {
         },
       });
     }
-  }, [showSecondTyped]); // 첫 번째 타이핑이 끝난 후 두 번째 타이핑 시작
+  }, [showSecondTyped]);
 
   return (
     <Box
@@ -72,6 +60,7 @@ const Desc = () => {
       display={"flex"}
       flexDirection={"column"}
       alignItems={"center"}
+      position={"relative"}
     >
       <Box
         w={"90%"}
@@ -122,6 +111,19 @@ const Desc = () => {
           </Box>
         </Box>
       )}
+      {/* <Link to="/options">
+        <h4
+          style={{
+            position: "absolute",
+            // top: "250px",
+            translateX: "-50%",
+            left: "50%",
+            textDecoration: "underline",
+          }}
+        >
+          건너뛰기
+        </h4>
+      </Link> */}
     </Box>
   );
 };

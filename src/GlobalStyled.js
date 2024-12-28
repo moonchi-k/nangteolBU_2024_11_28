@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 
 export const GlobalStyled = createGlobalStyle`
+
 @font-face {
     font-family: 'Cafe24Moyamoya-Regular-v1.0';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/Cafe24Moyamoya-Regular-v1.0.woff2') format('woff2');

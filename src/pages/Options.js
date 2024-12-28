@@ -123,12 +123,17 @@ const Options = () => {
       if (selectedAnswer.includes("나간다.")) {
         navigate("/failure", { state: { index: currentQuestionIndex } });
       } else {
+        navigate("/alert", {
+          state: {
+            selectedAnswer: selectedAnswer,
+            currentQuestionIndex: currentQuestionIndex,
+          },
+        });
         setCurrentQuestionIndex(currentQuestionIndex + 1);
       }
     } else if (currentQuestionIndex === 10) {
       if (selectedAnswer.includes("엘리")) {
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-        navigate("/alert", {
+        navigate("/success", {
           state: {
             selectedAnswer: selectedAnswer,
             currentQuestionIndex: currentQuestionIndex,
@@ -136,12 +141,6 @@ const Options = () => {
         });
       } else {
         navigate("/failure", { state: { index: currentQuestionIndex } });
-      }
-    } else if (currentQuestionIndex === 11) {
-      if (selectedAnswer.includes("벽")) {
-        navigate("/failure", { state: { index: currentQuestionIndex } });
-      } else {
-        navigate("/success");
       }
     }
   };
@@ -155,6 +154,7 @@ const Options = () => {
       bgRepeat={"no-repeat"}
       bgPosition={"center"}
       m={"0 auto"}
+      p={"0 20px"}
       textAlign={"center"}
       display={"flex"}
       flexDirection={"column"}

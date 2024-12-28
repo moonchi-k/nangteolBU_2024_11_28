@@ -9,6 +9,7 @@ export const questions = [
         text: "계단을 이용한다.",
       },
     ],
+    correctAnswerIndex: 1,
   },
 
   {
@@ -21,6 +22,7 @@ export const questions = [
         text: "가만히 있는다.",
       },
     ],
+    correctAnswerIndex: 1,
   },
 
   {
@@ -33,6 +35,7 @@ export const questions = [
         text: "일단 쇼파에서 한숨 돌릴까?.",
       },
     ],
+    correctAnswerIndex: 0,
   },
 
   {
@@ -46,6 +49,7 @@ export const questions = [
         text: "오감을 믿어. 그대로 간다.",
       },
     ],
+    correctAnswerIndex: 1,
   },
   {
     q: ["계란이랑 우유를 찾았다. 다른 재료들은?"],
@@ -57,6 +61,7 @@ export const questions = [
         text: "여기서 더 뒤져본다.",
       },
     ],
+    correctAnswerIndex: 0,
   },
   {
     q: ["어디로 가볼까?"],
@@ -80,6 +85,7 @@ export const questions = [
         text: "202호로 간다.",
       },
     ],
+    correctAnswerIndex: 1,
   },
   {
     q: ["치즈를 찾았다. 베이컨은?"],
@@ -92,6 +98,7 @@ export const questions = [
         text: "402호로 간다.",
       },
     ],
+    correctAnswerIndex: 1,
   },
   {
     q: ["어떻게 가지?"],
@@ -104,6 +111,7 @@ export const questions = [
         // 계단으로가면 문앞에서 이웃주민 만나서 체포
       },
     ],
+    correctAnswerIndex: 0,
   },
   {
     q: ["무사히 도착했지만 재료가 없다!"],
@@ -117,6 +125,7 @@ export const questions = [
         // 나가다가 집주인과 마주쳐 신고당함
       },
     ],
+    correctAnswerIndex: 0,
   },
   {
     q: ["1층으로 되돌아가야한다."],
