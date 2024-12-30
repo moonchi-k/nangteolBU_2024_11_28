@@ -1,15 +1,21 @@
 import { Box } from "@chakra-ui/react";
-import BgImg from "../components/bgImg.png";
+import BgImg from "../components/bgImg.jpg";
 // import starImg from "public_assets/img/starImg.png";
 import "./Success.css";
-
-import { Link, useLocation } from "react-router-dom";
+import { CiRedo } from "react-icons/ci";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Failure = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const savedIndex = JSON.parse(localStorage.getItem("index"));
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(
+    savedIndex || 0
+  );
 
   console.log(location);
+  console.log(currentQuestionIndex);
 
   const index = location.state.index;
   console.log(index);
@@ -25,6 +31,12 @@ const Failure = () => {
     // 컴포넌트가 unmount 될 때 타이머를 정리
     return () => clearTimeout(timer);
   }, []);
+
+  const startNewGame = () => {
+    localStorage.removeItem("index");
+    setCurrentQuestionIndex(0);
+    navigate("/options");
+  };
 
   const arrest = () => {
     switch (index) {
@@ -66,11 +78,12 @@ const Failure = () => {
         <Box
           maxW={"450px"}
           // p={"20px"}
-          maxH={"900px"}
+          maxH={"100vh"}
           h={"100vh"}
           bgImage={`url(${BgImg})`}
           bgRepeat={"no-repeat"}
           bgPosition={"center"}
+          bgSize={"cover"}
           m={"0 auto"}
           display={"flex"}
           flexDirection={"column"}
@@ -104,16 +117,23 @@ const Failure = () => {
               </Box>
             </Box>
           </Box>
-          <Link to={"/options"}>
-            <Box w={"100%"} as="h4" fontSize={"20px"} marginTop={"15px"}>
-              다시하기
-            </Box>
-          </Link>
+          <Box
+            onClick={startNewGame}
+            as="h4"
+            fontSize={"20px"}
+            marginTop={"15px"}
+            margin={"15px auto"}
+            display={"flex"}
+            alignItems={"center"}
+            cursor={"pointer"}
+          >
+            <CiRedo strokeWidth={"1px"} />
+            다시하기
+          </Box>
         </Box>
       ) : (
         <Box
           maxW={"450px"}
-          // p={"20px"}
           maxH={"900px"}
           h={"100vh"}
           bgImage={`url(${BgImg})`}

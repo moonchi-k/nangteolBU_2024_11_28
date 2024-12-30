@@ -3,7 +3,7 @@ import Bacon from "../components/베이컨.png";
 import Cheese from "../components/치즈.png";
 import { Box } from "@chakra-ui/react";
 import Ingre from "../components/ingre.png";
-import BgImg from "../components/bgImg.png";
+import BgImg from "../components/bgImg.jpg";
 import { useEffect, useState } from "react";
 
 const Alert = () => {
@@ -17,6 +17,7 @@ const Alert = () => {
   const page = location.state.currentQuestionIndex;
 
   console.log(answer);
+  console.log(showCompleted);
 
   //   localStorage.getItem("index");
   const ingredient = () => {
@@ -25,7 +26,6 @@ const Alert = () => {
         return `${Bacon}`;
 
       case "다른 냉장고를 더 찾아본다.":
-        console.log("dd");
         return `${Ingre}`;
 
       default:
@@ -35,7 +35,7 @@ const Alert = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowCompleted(true); // 5초 후에 완료 화면으로 전환
+      setShowCompleted(true);
     }, 4000);
 
     return () => clearTimeout(timer);
@@ -46,7 +46,7 @@ const Alert = () => {
       navigate("/options", {
         state: { currentQuestionIndex: page + 1 },
       });
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
@@ -54,11 +54,12 @@ const Alert = () => {
   return (
     <Box
       maxW={"450px"}
-      maxH={"900px"}
+      maxH={"100vh"}
       h={"100vh"}
       bgImage={`url(${BgImg})`}
       bgRepeat={"no-repeat"}
       bgPosition={"center"}
+      bgSize={"cover"}
       m={"0 auto"}
       textAlign={"center"}
       display={"flex"}
@@ -91,8 +92,8 @@ const Alert = () => {
           찾았다!
           <Box
             bgImg={ingredient}
-            w={"120px"}
-            h={"100px"}
+            w={"80px"}
+            h={"60px"}
             bgSize={"contain"}
             bgRepeat={"no-repeat"}
           ></Box>

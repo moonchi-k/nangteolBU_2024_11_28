@@ -8,11 +8,12 @@ const Main = () => {
       <Box
         maxW={"450px"}
         // p={"20px"}
-        maxH={"900px"}
+        maxH={"100vh"}
         h={"100vh"}
         bgImage={`url(${MainImg})`}
         bgRepeat={"no-repeat"}
         bgPosition={"center"}
+        bgSize={"cover"}
         m={"0 auto"}
         textAlign={"center"}
         paddingTop={"300px"}

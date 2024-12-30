@@ -1,10 +1,11 @@
 import { Box, Text } from "@chakra-ui/react";
-import BgImg from "../components/bgImg.png";
+import BgImg from "../components/bgImg.jpg";
 import LdImg from "../components/LdImg.png";
 import "./Success.css";
 import { useEffect, useState } from "react";
 import complete from "../components/success.png";
 import { useNavigate } from "react-router-dom";
+import { CiRedo } from "react-icons/ci";
 const Success = () => {
   const [showCompleted, setShowCompleted] = useState(false);
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const Success = () => {
   const startNewGame = () => {
     localStorage.removeItem("index"); // 로컬스토리지에서 "index" 항목 삭제
     setCurrentQuestionIndex(0); // 상태를 0으로 초기화하여 게임을 처음부터 시작
-    navigate("/options"); // 게임 첫 페이지로 이동
+    navigate("/desc"); // 게임 첫 페이지로 이동
   };
 
   return (
@@ -37,11 +38,12 @@ const Success = () => {
         <Box
           maxW={"450px"}
           // p={"20px"}
-          maxH={"900px"}
+          maxH={"100vh"}
           h={"100vh"}
           bgImage={`url(${BgImg})`}
           bgRepeat={"no-repeat"}
           bgPosition={"center"}
+          bgSize={"cover"}
           m={"0 auto"}
           display={"flex"}
           flexDirection={"column"}
@@ -83,25 +85,30 @@ const Success = () => {
             </Box>
           </Box>
 
-          <Text
+          <Box
             onClick={startNewGame}
-            as={"h4"}
+            as="h4"
             fontSize={"20px"}
-            fontFamily={""}
             marginTop={"15px"}
+            margin={"15px auto"}
+            display={"flex"}
+            alignItems={"center"}
+            cursor={"pointer"}
           >
+            <CiRedo strokeWidth={"1px"} />
             다시하기
-          </Text>
+          </Box>
         </Box>
       ) : (
         <Box
           maxW={"450px"}
           // p={"20px"}
-          maxH={"900px"}
+          maxH={"100vh"}
           h={"100vh"}
           bgImage={`url(${BgImg})`}
           bgRepeat={"no-repeat"}
           bgPosition={"center"}
+          bgSize={"cover"}
           m={"0 auto"}
           display={"flex"}
           flexDirection={"column"}

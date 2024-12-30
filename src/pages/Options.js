@@ -1,5 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
-import BgImg from "../components/bgImg.png";
+import BgImg from "../components/bgImg.jpg";
 import { questions } from "../components/questions";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -148,11 +148,12 @@ const Options = () => {
   return (
     <Box
       maxW={"450px"}
-      maxH={"900px"}
+      maxH={"100vh"}
       h={"100vh"}
       bgImage={`url(${BgImg})`}
       bgRepeat={"no-repeat"}
       bgPosition={"center"}
+      bgSize={"cover"}
       m={"0 auto"}
       p={"0 20px"}
       textAlign={"center"}
@@ -162,9 +163,9 @@ const Options = () => {
     >
       <Text
         marginTop={"70px"}
-        fontSize={"34px"}
+        fontSize={"32px"}
         as={"h5"}
-        letterSpacing={"-6px"}
+        letterSpacing={"-4px"}
       >
         {questionContent}
       </Text>
@@ -177,6 +178,7 @@ const Options = () => {
         borderBottom={"6px solid black"}
         borderRadius={"50px"}
         p={"5px"}
+        cursor={"pointer"}
       >
         <Box
           onClick={() => FirstclickHandler(0)}
@@ -202,6 +204,7 @@ const Options = () => {
         borderBottom={"6px solid black"}
         borderRadius={"50px"}
         p={"5px"}
+        cursor={"pointer"}
       >
         <Box
           onClick={() => FirstclickHandler(1)}
