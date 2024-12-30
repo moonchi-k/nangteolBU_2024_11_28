@@ -1,5 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
-import BgImg from "../components/bgImg.jpg";
+import BgImg from "../components/bgFinal.jpg";
+import Thief from "../components/thief.png";
 import { questions } from "../components/questions";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
